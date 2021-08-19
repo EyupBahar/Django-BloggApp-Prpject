@@ -1,7 +1,7 @@
 from django import forms
-from .models import Post, Commen, Category
+from .models import Post, Comment, Category
 
-class PostForm(models.Model):
+class PostForm(forms.ModelForm):
     status = forms.ChoiceField(choices=Post.OPTIONS)
     category = forms.ModelChoiceField(
         queryset=Category.objects.all(), empty_label="Select")
@@ -19,4 +19,4 @@ class PostForm(models.Model):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('content',)
+        fields = ('content', )
