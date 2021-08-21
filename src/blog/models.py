@@ -12,7 +12,6 @@ class Category(models.Model):
         
     def __str__(self):
         return self.name
-
 class Post(models.Model):
     OPTIONS = (
         ('d', 'Draft'),
@@ -31,8 +30,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
-    
     
     def comment_count(self):
         return self.comment_set.all().count()
