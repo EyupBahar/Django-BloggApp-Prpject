@@ -1,4 +1,4 @@
-#!D:\PROJECTS\Django-BloggApp-Prpject\myenv\Scripts\python.exe
+#!C:\Users\Eyupb\OneDrive\Masaüstü\django\clarusway-full-stack-7-21\django\projects\Blog_Project_Solution_Code\myenv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

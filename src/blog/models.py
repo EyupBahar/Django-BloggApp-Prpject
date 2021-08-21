@@ -18,18 +18,21 @@ class Post(models.Model):
         ('d', 'Draft'),
         ('p', 'Published')
     )
+  
     title = models.CharField(max_length=100)    
     content = models.TextField()
-    image = models.ImageField(upload_to = user_directory_path, default='Django.jpg')
+    image = models.ImageField(upload_to=user_directory_path, default='django.jpg')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, blank=True, null=True)
     publish_date = models.DateTimeField(auto_now_add=True)
-    last_updated = models.DateTimeField(auto_now=True)
+    # last_updated = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(max_length=10, choices=OPTIONS, default='d')
-    slug = models.SlugField(blank=True, unique=True)
+    slug = models.SlugField(blank=True)
 
     def __str__(self):
         return self.title
+    
+    
     
     def comment_count(self):
         return self.comment_set.all().count()
@@ -66,3 +69,4 @@ class PostView(models.Model):
     
     def __str__(self):
         return self.user.username
+    
