@@ -1,7 +1,7 @@
 <header class="site-header">
     <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-            <a class="navbar-brand mr-4" href="{% url 'blog:list' %}">Joker Blog</a>
+            <a class="navbar-brand mr-4" href="{% url 'blog:list' %}">Clarusway Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                 aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -14,9 +14,9 @@
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
                     {% if user.is_authenticated %}
-                    {% comment %} <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a> {% endcomment %}
-                    {% comment %} <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a> {% endcomment %}
-                    {% comment %} <a class="nav-item nav-link" href="{% url 'blog:create' %}">New Post</a> {% endcomment %}
+                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                    <a class="nav-item nav-link" href="{% url 'blog:create' %}">New Post</a>
                     {% else %}
                     <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                     <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>

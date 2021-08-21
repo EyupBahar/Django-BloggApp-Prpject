@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\PROJECTS\Django-BloggApp-Prpject\myenv"
+VIRTUAL_ENV="C:\Users\Eyupb\OneDrive\Masaüstü\django\clarusway-full-stack-7-21\django\projects\Blog_Project_Solution_Code\myenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
