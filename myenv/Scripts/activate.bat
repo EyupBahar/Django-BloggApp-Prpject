@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\PROJECTS\Django-BloggApp-Prpject\myenv
+set VIRTUAL_ENV=C:\Users\Eyupb\OneDrive\Masaüstü\django\clarusway-full-stack-7-21\django\projects\Blog_Project_Solution_Code\myenv
 
 if not defined PROMPT set PROMPT=$P$G
 
